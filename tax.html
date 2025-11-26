@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>PAGE_TITLE_HERE</title>
+</head>
+<body>
+<div class="top-gov-bar">भारत सरकार | महाराष्ट्र शासन | रत्नागिरी जिल्हा |तालुका खेड </div>
+<header>
+<h1>ग्रामपंचायत हेदली</h1>
+</header>
+<nav class="navbar">
+<button class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">मुख्यपृष्ठ</a>
+<a href="about.html">ग्रा.पं.माहिती</a>
+<a href="members.html">सदस्य</a>
+<a href="village.html">गाव माहिती</a>
+<a href="works.html">विकासकामे</a>
+<a href="gallery.html">छायाचित्रे</a>
+<a href="marrageinfo.html">जन्म-मृत्यू-विवाह माहिती</a>
+<a href="meeting.html">ग्रामसभा</a>
+<a href="tax.html">घरपट्टी भरणा</a>
+<a href="scheme.html">योजना माहिती</a>
+<a href="contact.html">संपर्क</a>
+</div>
+</nav>
+<main>
+<div class="info-box">
+<h2>घरपट्टी भरणा</h2>
+ <ul class="info-list"><li><span>कर वसुली</li></span>
+   </ul>
+</div>
+</div>
+</main>
+<footer>© 2025 ग्रामपंचायत हेदली — सर्व हक्क राखीव</footer>
+<script>
+const btn = document.getElementById("menuBtn");
+const nav = document.getElementById("navLinks");
+btn.addEventListener("click", () => { nav.classList.toggle("show"); });
+
+
+    // Highlight Active Menu Automatically
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        if(link.getAttribute("href") === currentPage){
+            link.classList.add("active");
+        }
+    });
+</script>
+</body>
+</html>

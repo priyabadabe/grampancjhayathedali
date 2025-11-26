@@ -4,283 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
-<title>ग्रामपंचायत हेदली</title>
- 
-<style>
-body {
-    margin: 0;
-    background: #f0f4f9;
-}
-
-/* ----------------- TOP GOV BAR ------------------ */
-.top-gov-bar {
-    background: #ff9933;
-    padding: 5px 10px;
-    color: #000;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* ----------------- HEADER ------------------ */
-header {
-    background: #002b5c;
-    padding: 18px 10px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    border-bottom: 5px solid #138808;
-}
-header img {
-    width: 60px;
-}
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
- /* NAVBAR */
-        .navbar {
-            background: #003f7f;
-            padding: 12px 20px;
-            display: flex;
-			justify-content:center; /* CENTERED MENU */
-            align-items:center;
-        }
-
-        /* LOGO */
-        .logo {
-            color: #ffe680;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* LINKS */
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #ff9933;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 17px;
-        }
-
-        /* HAMBURGER BUTTON */
-        .menu-btn {
-            display: none;
-            font-size: 30px;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* MOBILE */
-        @media (max-width: 900px) {
-            .menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none; /* hidden on mobile */
-                flex-direction: column;
-                width: 100%;
-                background: #003f7f;
-                text-align: center;
-                padding: 10px 0;
-            }
-
-            .nav-links.show {
-                display: flex; /* visible when toggled */
-            }
-
-            .nav-links a {
-                padding: 10px 0;
-            }
-        }
-
-/* ----------------- HERO SECTION ------------------ */
-.hero {
-    height: 600px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('photo/imagegp.jpg') center/cover no-repeat;
-    display: flex;
-	justify-content: center;
-    align-items: end;
-    color: #23ffc0;
-    text-align: end;
-}
-.hero h2 {
-    font-size: 45px;
-    margin: 0;
-}
-
-/* ----------------- CONTENT BOX ------------------ */
-.section {
-    width: 90%;
-    margin: 35px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 6px solid #003f7f;
-    box-shadow: 0 2px 8px #ccc;
-}
-.section h2 {
-    margin-top: 0;
-    color: #003f7f;
-    border-bottom: 2px solid #ff9933;
-    padding-bottom: 6px;
-}
-
-/* ----------------- INFO CARDS ------------------ */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.card {
-    flex: 1 1 calc(20% - 20px);
-    background: #f8fbff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 6px;
-    border: 1px solid #c7c7c7;
-    font-size: 20px;
-    font-weight: bold;
-}
-@media(max-width: 700px) {
-    .card { flex: 1 1 100%; }
-}
-
-/* ----------------- MEMBER GRID ------------------ */
-.member-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.member {
-    width: 15%;
-    background: #f8fbff;
-    border: 1px solid #c7c7c7;
-    border-radius: 6px;
-    padding: 15px;
-    text-align: center;
-}
-.member img {
-    width: 80%;
-    height: 150px;
-    /* object-fit: contain; */
-    border-radius: 6px;
-    background: #ddd;
-}
-@media(max-width: 768px) { .member { width: 45%; } }
-@media(max-width: 480px) { .member { width: 100%; } }
-
-/* ----------------- GALLERY ------------------ */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.gallery img {
-    width: 32%;
-    border-radius: 6px;
-    border: 1px solid #c7c7c7;
-    height: 200px;
-    object-fit: cover;
-}
-@media(max-width: 700px){ .gallery img { width: 48%; } }
-@media(max-width: 480px){ .gallery img { width: 100%; } }
-
-/* ----------------- FOOTER ------------------ */
-footer {
-    background: #002b5c;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    border-top: 5px solid #ff9933;
-}
-    /* Main Card */
-    .scheme-card {
-        background: #fff;
-        padding-left: 20px;
-        margin-bottom: 18px;
-        border-radius: 12px;
-       
-    }
-
-    .scheme-title {
-        margin: 0;
-        font-size: 22px;
-        color: #1c3d72;
-        font-weight: 700;
-    }
-
-    /* Subpoints */
-    .sub-list {
-        margin-top: 12px;
-        padding-left: 10px;
-    }
-
-    .sub-item {
-        background: #f8fbff;
-        padding: 12px;
-        border: 1px solid #d9e4f2;
-        margin-bottom: 10px;
-        border-radius: 8px;
-    }
-
-    .sub-item b {
-        color: #1a5278;
-    }
-   h1,h2,h3,p,li{
-   font-family: 'Noto Sans Devanagari', sans-serif;
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
+<title>PAGE_TITLE_HERE</title>
 </head>
- 
 <body>
+<div class="top-gov-bar">भारत सरकार | महाराष्ट्र शासन | रत्नागिरी जिल्हा |तालुका खेड </div>
+<header>
+<h1>ग्रामपंचायत हेदली</h1>
+</header>
+<nav class="navbar">
+<button class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">मुख्यपृष्ठ</a>
+<a href="about.html">ग्रा.पं.माहिती</a>
+<a href="members.html">सदस्य</a>
+<a href="village.html">गाव माहिती</a>
+<a href="works.html">विकासकामे</a>
+<a href="gallery.html">छायाचित्रे</a>
+<a href="marrageinfo.html">जन्म-मृत्यू-विवाह माहिती</a>
+<a href="meeting.html">ग्रामसभा</a>
+<a href="tax.html">घरपट्टी भरणा</a>
+<a href="scheme.html">योजना माहिती</a>
+<a href="contact.html">संपर्क</a>
+</div>
+</nav>
+<main>
+<div class="hero"></div>
 
-<div class="top-gov-bar">भारत सरकार | महाराष्ट्र शासन | रत्नागिरी जिल्हा |तालुका खेड </div><header>
-&nbsp;&nbsp;
-<h1>ग्रामपंचायत हेदली - <h3>निसर्गाच्या कुशीत वसलेले हेदली गाव</h3></h1>
-</header><nav class="navbar">
-        
-        <!-- BUTTON -->
-        <button class="menu-btn" id="menuBtn">☰</button>
-
-        <!-- MENU LINKS -->
-        <div class="nav-links" id="navLinks">
-            <a href="#about">ग्रा.पं.माहिती</a>
-            <a href="#members">सदस्य</a>
-            <a href="#village">गाव माहिती</a>
-            <a href="#works">विकासकामे</a>
-            <a href="#gallery">छायाचित्रे</a>
-            <a href="#marrageinfo">जन्म-मृत्यू-विवाह माहिती</a>
-            <a href="#meeting">ग्रामसभा</a>
-            <a href="#tax">घरपट्टी भरणा</a>
-            <a href="#complaint">अभिप्राय/तक्रार</a>
-            <a href="#contact">संपर्क</a>
-        </div>
-    </nav><div class="hero">
-&nbsp;&nbsp;&nbsp; 
-</div><!-- -------- ALL CONTENT BOXES ---------- --><div class="section">
+<div class="info-box">
 <h2>गावाची सविस्तर माहिती</h2>
 <div class="cards">
 <div class="card">वाड्या <br> <b>०८</b></div>
 <div class="card">लोकसंख्या <br> <b>१३६८</b></div>
 <div class="card">क्षेत्रफळ <br> <b>५९६.५३ हे</b></div>
 </div>
-</div><div class="section" id="about">
+</div>
+<div class="info-box">
 <h2>ग्रामपंचायतीबद्दल माहिती</h2>
 <p>हेदली ग्रामपंचायतीची स्थापना १९५९ रोजी करण्यात आलेली आहे. हेदली गावामध्ये एकूण आठ वाड्या आहेत. बाजारवाडी, बौद्धवाडी, चिनकटेवाडी, गायकवाडवाडी, मधलीवाडी, म्हादेवाडी, काणेकर मोहल्ला, धुलपवाडी अश्या वाड्या आहेत. या गावामध्ये सर्व धर्माचे लोक राहतात. गावामध्ये अनेक प्रकारची देवस्थाने असून सर्व जाती धर्माचे लोक एकत्रीतपणे येवून परंपरागत सन साजरे करतात. आणि हेदली हे गाव खेड शहरापासून ९ कि. मी.अंतरावर आहे.&nbsp; गावात गणेशोउत्सव, दिवाळी, दसरा ई. सण साजरे केले जातात.</p>
-</div><div class="section" id="members">
+</div>
+<div class="info-box">
 <h2>सरपंच व सदस्य</h2>
 &nbsp;
 <div class="member-grid">
@@ -298,14 +61,14 @@ footer {
 &nbsp;
 <div class="member"><img src="photo\prerana.jpeg"><h3>सौ. प्रेरणा शिगवण</h3><p>सदस्य</p></div>
 </div>
-</div><div class="section">
+</div><div class="info-box">
 <h2>ग्रामपंचायत अधिकारी व कर्मचारी</h2>
 <div class="member-grid">
 <div class="member"><img src="photo\SAGAR.jpg"><h3>श्री. सागर वाडेकर</h3><p>ग्रामपंचायत अधिकारी</p></div>
 <div class="member"><img src="photo\sachi.jpeg"><h3>श्री. सचिन गोळे</h3><p>शिपाई</p></div>
 <div class="member"><img src="photo\89.jpeg"><h3>कु. प्रिया बडबे</h3><p>डेटा एंट्री ऑपरेटर</p></div>
 </div>
-</div><div class="section" id="gallery">
+</div><div class="info-box">
 <h2>छायाचित्रे</h2>
 <div class="gallery">
 <img src="photo\jatra1.jpeg" .jpeg"="">
@@ -316,91 +79,83 @@ footer {
 <img src="photo\jatra.jpeg" .jpeg"="">
 </div>
 </div>
-<div class="section" id="works">
+<div class="info-box">
 <h2>विकासकामे</h2>
-<p></p><ul><li>बाजारवाडी अंतर्गत पाखडी करणे</li> 
-   </ul><p></p>
+ <ul class="info-list"><li><span>बाजारवाडी अंतर्गत पाखडी करणे</li></span>
+   </ul>
 </div>
-<div class="section" id="village">
-<h2>गावाची मूलभूत माहिती</h2>
-<p></p><ul> <li>लोकसंख्या— पुरुष ६४६, स्त्री ७२२</li>
-    <li>गावातील प्राथमिक शाळा संख्या:- ०१</li>
-    <li>गावातील मध्यमिक शाळा संख्या:- ०१</li>
-    <li>गावातील अंगणवाडी :- ०२</li>
-    <li>ग्रा.पं. सदस्य संख्या:- ०७</li>
-    <li>गावतील नळ पाणी योजाना:- ०४ </li></ul><p></p>
+</div>
+<div class="info-box">
+    <h2>गावाची मूलभूत माहिती</h2>
+
+    <ul class="info-list">
+        <li><span>लोकसंख्या — पुरुष ६६७, स्त्री ७२१</span></li>
+        <li><span>गावातील प्राथमिक शाळा संख्या : ०१</span></li>
+        <li><span>गावातील माध्यमिक शाळा संख्या : ०१</span></li>
+        <li><span>गावातील अंगणवाडी : ०२</span></li>
+        <li><span>ग्रा.पं. सदस्य संख्या : ०९</span></li>
+        <li><span>गावातील नळ पाणी योजना : ०४</span></li>
+    </ul>
 </div>
 
-<div class="section" id="marrageinfo">
-<h2>जन्म-मृत्यू-विवाह माहिती</h2>
-<p></p><ul> 
-   </ul><p></p>
-</div>
-<div class="section" id="meeting">
-<h2>ग्रामसभा</h2>
-<p></p><ul> 
-   </ul><p></p>
-</div>
-<div class="section" id="tax">
-<h2>घरपट्टी भरणा</h2>
-<p></p><ul> 
-   </ul><p></p>
-</div>
-<div class="section" id="complaint">
-<h2>अभिप्राय/तक्रार</h2>
-<p></p><ul> 
-   </ul><p></p>
-</div>
-<!-- school Info -->
-<div class="section" id="school">
-<h2> शाळेची मूलभूत माहिती</h2>
-<p>
-</p><ul>
-	<li>शाळा</li>
-	<li>पूर्ण प्राथमिक केंद्र शाळा हेदली नं. १</li>
-	<li>पूर्ण प्राथमिक शाळा हेदली चिनकटेवाडी</li>
+<div class="info-box">
+ <h2> शाळेची मूलभूत माहिती</h2>
+ <ul class="info-list">
+	<li><span>शाळा</span></li>
+	<li><span>पूर्ण प्राथमिक केंद्र शाळा हेदली नं. १</span></li>
+	<li><span>पूर्ण प्राथमिक शाळा हेदली चिनकटेवाडी</span></li>
 </ul>
-<p></p>
 </div>
-<!-- Road Info -->
-<div class="section">
+
+
+<div class="info-box">
 <h2 id="Road">रस्ते माहिती</h2>
-<p>
-</p><ul>
-	<li>हेदली खोपी मुख्य रस्ता ते चिनकटेवाडी गायकवाडवाडी रस्ता</li>
-	<li>हेदली बाजारवाडी अंतर्गत रस्ता </li>
-	<li>हेदली खोपी मुख्य रस्ता ते म्हादेवाडी पाणवठा रस्ता</li>
-    <li>हेदली खोपी मुख्य रस्ता ते काणेकर मोहल्ला अंतर्गत रस्ता </li>
-	<li>हेदली बाजारवाडी मधलीवाडी रस्ता</li> 
-	<li>हेदली मुख्य रस्ता ते बौद्धवाडी रस्ता </li>
+ <ul class="info-list">
+	<li><span>हेदली खोपी मुख्य रस्ता ते चिनकटेवाडी गायकवाडवाडी रस्ता</span></li>
+	<li><span>हेदली बाजारवाडी अंतर्गत रस्ता</span></li>
+	<li><span>हेदली खोपी मुख्य रस्ता ते म्हादेवाडी पाणवठा रस्ता</span></li>
+    <li><span>हेदली खोपी मुख्य रस्ता ते काणेकर मोहल्ला अंतर्गत रस्ता </span></li>
+	<li><span>हेदली बाजारवाडी मधलीवाडी रस्ता</span></li>
+	<li><span>हेदली मुख्य रस्ता ते बौद्धवाडी रस्ता </span></li>
 
 </ul>
-<p></p>
 </div>
-<!-- Public Place Info -->
-<div class="section" id="place">
+<div class="info-box">
 <h2>  सार्वजनिक ठिकाणे</h2>
-<p>
-</p><ul>
-	<li>हेदली चिनकटेवाडी सांकृतिक केंद्र,हेदली बाजारवाडी विठ्ठल रखुमाई मंदिर</li>
-	<li>हेदली श्री.झोलाई केदारनाथ गावदेवी मंदिर</li>
+ <ul class="info-list">
+	<li><span>हेदली चिनकटेवाडी सांकृतिक केंद्र,हेदली बाजारवाडी विठ्ठल रखुमाई मंदिर</span></li>
+	<li><span>हेदली श्री.झोलाई केदारनाथ गावदेवी मंदिर</span></li>
 
 </ul>
-<p></p>
+
 </div>
-<div class="section">
+
+<div class="info-box">
+<h2>ग्रामसभा</h2>
+ <ul class="info-list"><li><span>ग्रामसभा</li></span>
+   </ul>
+</div>
+</div>
+
+<div class="info-box">
+<h2>घरपट्टी भरणा</h2>
+ <ul class="info-list"><li><span>कर वसुली</li></span>
+   </ul>
+</div>
+</div>
+
+
+<div class="info-box">
 <!-- Programs Info -->
 <h2 id="program">एकत्रित कार्यक्रम</h2>
-<p>
-</p><ul>
-	
-    <li>नवरात्रउत्सव</li>
-	<li>त्रैवार्षिक जत्राउत्सव</li>
+<ul class="info-list"><li><span>नवरात्रउत्सव</li></span>
+	<li><span>त्रैवार्षिक जत्राउत्सव</li></span>
 </ul>
-<p></p>
 </div>
 <!-- Schemes Info -->
-<div class="section">
+<div class="info-box">
+
+
 <div class="container">
 
     <h2 id="pScheme">विविध योजना आणि लाभार्थी</h2>
@@ -412,6 +167,7 @@ footer {
 
     <!-- Main Option 2 -->
     <div class="scheme-card">
+
         <li><h3 class="scheme-title"> महाराष्ट्र रोजगार हमी योजना</h3></li>
 
         <!-- Subpoints under Maharashtra Rojgar Hami Yojana -->
@@ -429,22 +185,30 @@ footer {
 
         </div>
     </div>
-
-</div>
-</div>
-<div class="section" id="contact">
+    <div class="scheme-card">
+        <li><h3 class="scheme-title">घरकुल योजना</h3></li>
+    </div>
+</div></div>
+<div class="info-box">
 <h2>संपर्क</h2>
 <p><b>ग्रामपंचायत हेदली</b><br>तालुका-खेड,रत्नागिरी-जिल्हा,पिनकोड-४१५७०९<br>ईमेल: gphedali2021@gmail.com</p>
-</div><footer>
-© 2025 ग्रामपंचायत हेदली — सर्व हक्क राखीव
-</footer>
- <script>
-        const btn = document.getElementById("menuBtn");
-        const nav = document.getElementById("navLinks");
+</div>
+</main>
 
-        btn.addEventListener("click", () => {
-            nav.classList.toggle("show");
-        });
-    </script>
+<footer>© 2025 ग्रामपंचायत हेदली — सर्व हक्क राखीव</footer>
+<script>
+const btn = document.getElementById("menuBtn");
+const nav = document.getElementById("navLinks");
+btn.addEventListener("click", () => { nav.classList.toggle("show"); });
+
+
+    // Highlight Active Menu Automatically
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        if(link.getAttribute("href") === currentPage){
+            link.classList.add("active");
+        }
+    });
+</script>
 </body>
 </html>

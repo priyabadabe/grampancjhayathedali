@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>PAGE_TITLE_HERE</title>
+</head>
+<body>
+<div class="top-gov-bar">भारत सरकार | महाराष्ट्र शासन | रत्नागिरी जिल्हा |तालुका खेड </div>
+<header>
+<h1>ग्रामपंचायत हेदली</h1>
+</header>
+<nav class="navbar">
+<button class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="index.html">मुख्यपृष्ठ</a>
+<a href="about.html">ग्रा.पं.माहिती</a>
+<a href="members.html">सदस्य</a>
+<a href="village.html">गाव माहिती</a>
+<a href="works.html">विकासकामे</a>
+<a href="gallery.html">छायाचित्रे</a>
+<a href="marrageinfo.html">जन्म-मृत्यू-विवाह माहिती</a>
+<a href="meeting.html">ग्रामसभा</a>
+<a href="tax.html">घरपट्टी भरणा</a>
+<a href="scheme.html">योजना माहिती</a>
+<a href="contact.html">संपर्क</a>
+</div>
+</nav>
+<main>
+<div class="info-box">
+    <h2>गावाची मूलभूत माहिती</h2>
+
+    <ul class="info-list">
+        <li><span>लोकसंख्या — पुरुष ६६७, स्त्री ७२१</span></li>
+        <li><span>गावातील प्राथमिक शाळा संख्या : ०१</span></li>
+        <li><span>गावातील माध्यमिक शाळा संख्या : ०१</span></li>
+        <li><span>गावातील अंगणवाडी : ०२</span></li>
+        <li><span>ग्रा.पं. सदस्य संख्या : ०९</span></li>
+        <li><span>गावातील नळ पाणी योजना : ०४</span></li>
+    </ul>
+</div>
+
+<div class="info-box">
+ <h2> शाळेची मूलभूत माहिती</h2>
+ <ul class="info-list">
+	<li><span>शाळा</span></li>
+	<li><span>पूर्ण प्राथमिक केंद्र शाळा हेदली नं. १</span></li>
+	<li><span>पूर्ण प्राथमिक शाळा हेदली चिनकटेवाडी</span></li>
+</ul>
+</div>
+
+
+<div class="info-box">
+<h2 id="Road">रस्ते माहिती</h2>
+ <ul class="info-list">
+	<li><span>हेदली खोपी मुख्य रस्ता ते चिनकटेवाडी गायकवाडवाडी रस्ता</span></li>
+	<li><span>हेदली बाजारवाडी अंतर्गत रस्ता</span></li>
+	<li><span>हेदली खोपी मुख्य रस्ता ते म्हादेवाडी पाणवठा रस्ता</span></li>
+    <li><span>हेदली खोपी मुख्य रस्ता ते काणेकर मोहल्ला अंतर्गत रस्ता </span></li>
+	<li><span>हेदली बाजारवाडी मधलीवाडी रस्ता</span></li>
+	<li><span>हेदली मुख्य रस्ता ते बौद्धवाडी रस्ता </span></li>
+
+</ul>
+</div>
+<div class="info-box">
+<h2>  सार्वजनिक ठिकाणे</h2>
+ <ul class="info-list">
+	<li><span>हेदली चिनकटेवाडी सांकृतिक केंद्र,हेदली बाजारवाडी विठ्ठल रखुमाई मंदिर</span></li>
+	<li><span>हेदली श्री.झोलाई केदारनाथ गावदेवी मंदिर</span></li>
+
+</ul>
+
+</div>
+</main>
+<footer>© 2025 ग्रामपंचायत हेदली — सर्व हक्क राखीव</footer>
+<script>
+const btn = document.getElementById("menuBtn");
+const nav = document.getElementById("navLinks");
+btn.addEventListener("click", () => { nav.classList.toggle("show"); });
+
+    // Highlight Active Menu Automatically
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        if(link.getAttribute("href") === currentPage){
+            link.classList.add("active");
+        }
+    });
+</script>
+</body>
+</html>
