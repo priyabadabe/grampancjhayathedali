@@ -29,7 +29,25 @@
 </div>
 </nav>
 <main>
-<div class="hero"></div>
+
+<div class="photo-scroller">
+    <h2>गावातील छायाचित्रे</h2>
+
+    <div class="scroll-container">
+        <img src="photo/gpimage.jpg" alt="">
+        <img src="photo/independenceday.jpeg" alt="">
+        <img src="photo/help.jpeg" alt="">
+        <img src="photo/school.jpeg" alt="">
+		<img src="photo/schoolfunction.jpeg" alt="">
+		<img src="photo/schoolfunction2.jpeg" alt="">
+		<img src="photo/camp.jpeg" alt="">
+		<img src="photo/help2.jpeg" alt="">
+		<img src="photo/childrens.jpeg" alt="">
+		
+    </div>
+
+
+</div>
 
 <div class="info-box">
 <h2>गावाची सविस्तर माहिती</h2>
@@ -66,7 +84,7 @@
 <div class="member-grid">
 <div class="member"><img src="photo\SAGAR.jpg"><h3>श्री. सागर वाडेकर</h3><p>ग्रामपंचायत अधिकारी</p></div>
 <div class="member"><img src="photo\sachi.jpeg"><h3>श्री. सचिन गोळे</h3><p>शिपाई</p></div>
-<div class="member"><img src="photo\89.jpeg"><h3>कु. प्रिया बडबे</h3><p>डेटा एंट्री ऑपरेटर</p></div>
+<div class="member"><img src="photo\priya.jpeg"><h3>कु. प्रिया बडबे</h3><p>संगणक परिचालक</p></div>
 </div>
 </div><div class="info-box">
 <h2>छायाचित्रे</h2>
@@ -209,6 +227,37 @@ btn.addEventListener("click", () => { nav.classList.toggle("show"); });
             link.classList.add("active");
         }
     });
+	
+	
 </script>
+<script>
+    const sc = document.querySelector('.scroll-container');
+    setInterval(() => {
+        sc.scrollLeft += 350;
+        if (sc.scrollLeft >= sc.scrollWidth - sc.clientWidth) {
+            sc.scrollLeft = 0; // loop back
+        }
+    }, 2500);
+	
+	
+	const scroller = document.getElementById('scroller');
+
+let scrollAmount = 0;
+const scrollStep = 2; // pixels per interval
+const interval = 15;  // ms
+
+function autoScroll() {
+    scrollAmount += scrollStep;
+    if (scrollAmount >= scroller.scrollWidth - scroller.clientWidth) {
+        scrollAmount = 0; // restart from beginning
+    }
+    scroller.scrollLeft = scrollAmount;
+    requestAnimationFrame(autoScroll);
+}
+
+// Start scrolling
+autoScroll();
+</script>
+
 </body>
 </html>
