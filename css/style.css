@@ -263,7 +263,22 @@ border-top: 5px solid #ff9933;
 .scroll-container img:hover {
     transform: scale(1.06);
 }
+.site-header {
+    text-align: center;
+    padding: 10px 0;
+}
 
+.title-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-logo {
+    height: 60px;   /* change size if needed */
+    width: auto;
+}
 .info-list li::before {
     content: \"✔\";
     color: #002b5c;
