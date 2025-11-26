@@ -41,23 +41,68 @@ header h1 {
     font-size: 32px;
 }
 
-/* ----------------- MENU ------------------ */
-nav {
-    background: #003f7f;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 12px 0;
-}
-nav a {
-    color: #ff9933;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 17px;
-}
-nav a:hover {
-    color: #ffeb99;
-}
+ /* NAVBAR */
+        .navbar {
+            background: #003f7f;
+            padding: 12px 20px;
+            display: flex;
+			justify-content:center; /* CENTERED MENU */
+            align-items:center;
+        }
+
+        /* LOGO */
+        .logo {
+            color: #ffe680;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* LINKS */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ff9933;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        /* HAMBURGER BUTTON */
+        .menu-btn {
+            display: none;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none; /* hidden on mobile */
+                flex-direction: column;
+                width: 100%;
+                background: #003f7f;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .nav-links.show {
+                display: flex; /* visible when toggled */
+            }
+
+            .nav-links a {
+                padding: 10px 0;
+            }
+        }
 
 /* ----------------- HERO SECTION ------------------ */
 .hero {
@@ -205,18 +250,25 @@ footer {
 <div class="top-gov-bar">भारत सरकार | महाराष्ट्र शासन | रत्नागिरी जिल्हा |तालुका खेड </div><header>
 &nbsp;&nbsp;
 <h1>ग्रामपंचायत हेदली - <h3>निसर्गाच्या कुशीत वसलेले हेदली गाव</h3></h1>
-</header><nav>
-&nbsp;&nbsp;&nbsp; <a href="#about">ग्रा.पं.माहिती</a>
-&nbsp;&nbsp;&nbsp; <a href="#members">सदस्य</a>
-&nbsp;&nbsp;&nbsp; <a href="#village">गाव माहिती</a>
-&nbsp;&nbsp;&nbsp; <a href="#works">विकासकामे</a>
-&nbsp;&nbsp;&nbsp; <a href="#gallery">छायाचित्रे</a>
-&nbsp;&nbsp;&nbsp; <a href="#marrageinfo">जन्म-मृत्यू-विवाह माहिती</a>
-&nbsp;&nbsp;&nbsp; <a href="#meeting">ग्रामसभा</a>
-&nbsp;&nbsp;&nbsp; <a href="#tax">घरपट्टी भरणा</a>
-&nbsp;&nbsp;&nbsp; <a href="#complaint">अभिप्राय/तक्रार</a>
-&nbsp;&nbsp;&nbsp; <a href="#contact">संपर्क</a>
-</nav><div class="hero">
+</header><nav class="navbar">
+        
+        <!-- BUTTON -->
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <!-- MENU LINKS -->
+        <div class="nav-links" id="navLinks">
+            <a href="#about">ग्रा.पं.माहिती</a>
+            <a href="#members">सदस्य</a>
+            <a href="#village">गाव माहिती</a>
+            <a href="#works">विकासकामे</a>
+            <a href="#gallery">छायाचित्रे</a>
+            <a href="#marrageinfo">जन्म-मृत्यू-विवाह माहिती</a>
+            <a href="#meeting">ग्रामसभा</a>
+            <a href="#tax">घरपट्टी भरणा</a>
+            <a href="#complaint">अभिप्राय/तक्रार</a>
+            <a href="#contact">संपर्क</a>
+        </div>
+    </nav><div class="hero">
 &nbsp;&nbsp;&nbsp; 
 </div><!-- -------- ALL CONTENT BOXES ---------- --><div class="section">
 <h2>गावाची सविस्तर माहिती</h2>
@@ -386,5 +438,13 @@ footer {
 </div><footer>
 © 2025 ग्रामपंचायत हेदली — सर्व हक्क राखीव
 </footer>
+ <script>
+        const btn = document.getElementById("menuBtn");
+        const nav = document.getElementById("navLinks");
+
+        btn.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
