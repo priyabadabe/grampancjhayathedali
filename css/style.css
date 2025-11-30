@@ -113,6 +113,7 @@ border-top: 5px solid #ff9933;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
     margin: 25px auto;
     width: 90%;
+     font-size: 23px;
 }
 
 .info-box h2 {
@@ -519,6 +520,103 @@ border-radius: 12px;
 
 
 
+.zp-footer {
+    background: #05457b;
+    color: #fff;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Top Logos */
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 10px;
+    background: #003c70;
+}
+.footer-logos img {
+    width: 150px;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+}
+
+/* Content Section */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 45px 50px;
+}
+.footer-col {
+    width: 22%;
+    text-align: left;
+}
+.footer-col ul li {
+    list-style: disc;
+    margin: 6px 0;
+    font-size: 18px;
+}
+.footer-col ul li a {
+ text-decoration: none !important;  /* removes underline */
+    color: #ffffff !important; 
+
+}
+.footer-col p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.footer-logo-right {
+    width: 22%;
+    text-align: center;
+}
+.footer-logo-right img {
+    width: 160px;
+    margin-bottom: 10px;
+}
+.footer-logo-right h2 {
+    color: #ff934f;
+    font-size: 28px;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+    background: #003c70;
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.footer-bottom a {
+    color: #ff934f;
+    font-weight: bold;
+}
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-col,
+    .footer-logo-right {
+        width: 45%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .footer-col,
+    .footer-logo-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-col ul {
+        padding: 0;
+    }
+    .footer-col ul li {
+        list-style: none;
+    }
+}
 
 
 
