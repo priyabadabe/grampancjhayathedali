@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-    background: #002b5c; 
+    /* background: #002b5c;  */
     padding: 18px 10px; 
     color: white; 
     display: flex; 
@@ -338,6 +338,84 @@ border-top: 5px solid #ff9933;
 .mint { background: #def6ef; color: #1d8f73; }
 .gray3 { background: #e2e2e2; color: #555; }
 .petrol { background: #ffdede; color: #d9534f; }
+
+
+
+/* 🔹 Top Header with Logos */
+.top-logo-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: white;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.gov-logo-1 {
+    width: 115px;
+    height: auto;
+    padding-left: 200px;;
+}
+.gov-logo-2 {
+    width: 115px;
+    height: auto;
+    padding-right: 200px;
+}
+
+.center-box {
+    text-align: center;
+}
+
+.center-logo {
+    width: 95px;
+    display: block;
+    margin: auto;
+}
+
+.center-box h1 {
+    font-size: 40px;
+    margin: 6px 0 0 0;
+    font-weight: 700;
+    color: #000;
+}
+
+.center-box h2 {
+    font-size: 22px;
+    margin: 5px 0 0 0;
+    color: #444;
+    font-weight: 500;
+}
+
+/* 🔹 Page Content */
+.content {
+    padding: 25px;
+    font-size: 20px;
+}
+
+/* 🔹 Responsive Mobile View */
+@media (max-width: 768px) {
+    .top-logo-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0;
+    }
+
+    .gov-logo {
+        width: 90px;
+    }
+
+    .center-logo {
+        width: 75px;
+    }
+
+    .center-box h1 {
+        font-size: 30px;
+    }
+    .center-box h2 {
+        font-size: 18px;
+    }
+}
 
 .info-list li::before {
     content: \"✔\";
