@@ -533,7 +533,7 @@ border-radius: 12px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    padding: 25px 10px;
+    padding: 15px 10px;
     background: #003c70;
 }
 .footer-logos img {
@@ -554,12 +554,16 @@ border-radius: 12px;
     width: 22%;
     text-align: left;
 }
+.footer-col-links {
+    width: 16%;
+    text-align: left;
+}
 .footer-col ul li {
     list-style: disc;
     margin: 6px 0;
     font-size: 18px;
 }
-.footer-col ul li a {
+.footer-col ul p a {
  text-decoration: none !important;  /* removes underline */
     color: #ffffff !important; 
 
