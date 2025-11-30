@@ -357,12 +357,12 @@ border-top: 5px solid #ff9933;
 .gov-logo-1 {
     width: 115px;
     height: auto;
-    padding-left: 200px;;
+    /* padding-left: 200px;; */
 }
 .gov-logo-2 {
     width: 115px;
     height: auto;
-    padding-right: 200px;
+    /* padding-right: 200px; */
 }
 
 .center-box {
@@ -394,6 +394,14 @@ border-top: 5px solid #ff9933;
     padding: 25px;
     font-size: 20px;
 }
+@media (min-width: 1024px)  {
+.gov-logo-1 {
+    padding-left: 200px;;
+}
+.gov-logo-2 {
+    padding-right: 200px;
+}
+}
 
 /* 🔹 Responsive Mobile View */
 @media (max-width: 768px) {
@@ -417,27 +425,59 @@ border-top: 5px solid #ff9933;
     .center-box h2 {
         font-size: 18px;
     }
+    
 }
-@media(max-width: 480px){
-     .top-logo-bar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 0;
-    }
 
-    .gov-logo {
+/* 🔹 Very small phones */
+@media (max-width: 480px) {
+    .gov-logo-1, .gov-logo-2 {
         width: 90px;
     }
 
-    .center-logo {
-        width: 75px;
+    .center-box h1 {
+        font-size: 24px;
+    }
+
+    .center-box h2 {
+        font-size: 16px;
+    }
+    
+}
+/* 🔹 Mobile and Tablet View */
+@media (max-width: 900px) {
+    .top-logo-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gov-logo-1,
+    .gov-logo-2 {
+        width: 110px;
     }
 
     .center-box h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
+
     .center-box h2 {
         font-size: 18px;
+    }
+}
+
+/* 🔹 Small Phones */
+@media (max-width: 540px) {
+    .gov-logo-1,
+    .gov-logo-2 {
+        width: 90px;
+    }
+
+    .center-box h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .center-box h2 {
+        font-size: 16px;
     }
 }
 
