@@ -24,6 +24,9 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.12);
     transition: .3s;
     border-left: 3px solid #002b5c;
+     border-right: 3px solid #002b5c;
+         border-top: 3px solid #ff9933;
+             border-bottom: 3px solid #ff9933;
 }
 
 .scheme-card:hover {
