@@ -108,8 +108,8 @@ border-top: 5px solid #ff9933;
     background: #ffffff;
     padding: 25px 35px;
     border-radius: 12px;
-    border-left: 6px solid #002b5c; /* blue stripe */
-    border-top: 4px solid #ff9933; /* orange bar */
+    border-left: 4px solid #002b5c; /* blue stripe */
+    border-top: 3px solid #ff9933; /* orange bar */
     box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
     margin: 25px auto;
     width: 90%;
@@ -672,13 +672,13 @@ border-radius: 12px;
 
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 35px;
     justify-items: center;
 }
 
 .team-card {
-    width: 250px;
+    width: 280px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
