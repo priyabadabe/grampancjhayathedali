@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/rti.css">
 <title>ग्रामपंचायत हेदली</title>
 <link rel="icon" type="image/png" href="photo/logo.png">
 </head>
@@ -33,19 +34,62 @@
 <a href="members.html">कार्यकारी मंडळ</a>
 <a href="village.html">गाव माहिती</a>
 <a href="documents.html">कागदपत्रे</a>
-<a href="gallery1.html">एक खिडकी </a>
+<a href="forms.html">एक खिडकी </a>
 <a href="gallery.html">छायाचित्रे</a>
 <a href="scheme.html">योजना माहिती</a>
-<a href="scheme1.html">माहितीचा अधिकार संपर्क</a>
+<a href="right-to-information-contact.html">माहितीचा अधिकार संपर्क</a>
 <a href="contact.html">संपर्क</a>
 </div>
 </nav>
 <main>
-
 <div class="info-box">
-<h2>ग्रामसभा</h2>
- <ul class="info-list"><li><span>ग्रामसभा</li></span>
-   </ul>
+    <h2 class="rti-title">आरटीआय जनमाहिती अधिकारी तपशील</h2>
+
+    <table class="rti-table">
+          <thead>
+        <tr>
+            <th>अनु.क्र.</th>
+            <th>नाव</th>
+            <th>विभाग</th>
+            <th>पदनाम</th>
+            <th>ईमेल</th>
+            <th>फोन क्र.</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>श्री. सागर वाडेकर</td>
+            <td>ग्रामपंचायत</td>
+            <td>जन माहिती अधिकारी</td>
+            <td>gphedali2021@gmail.com</td>
+            <td>९५२९८२०८१८</td>
+        </tr>
+    </tbody>
+        </table>
+
+    <!-- RTI Appellate -->
+    <h2 class="rti-title">आरटीआय प्रथम अपीलीय अधिकारी तपशील</h2>
+
+    <table class="rti-table">
+            <tr>
+                <th>अनु.क्र.</th>
+                <th>नाव</th>
+                <th>विभाग</th>
+                <th>पदनाम</th>
+                <th>ईमेल</th>
+                <th>फोन क्र.</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>श्री. सचिन गोळे</td>
+                <td>ग्रामपंचायत</td>
+                <td>विस्तार अधिकारी (ग्रा. प.)</td>
+                <td>gphedali2021@gmail.com</td>
+                <td>९५२९८२०८१८</td>
+            </tr>
+        </table>
+
 </div>
 </div>
 </main>
@@ -110,6 +154,7 @@
 const btn = document.getElementById("menuBtn");
 const nav = document.getElementById("navLinks");
 btn.addEventListener("click", () => { nav.classList.toggle("show"); });
+
 
     // Highlight Active Menu Automatically
     const currentPage = window.location.pathname.split("/").pop();

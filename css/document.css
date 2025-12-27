@@ -1,0 +1,86 @@
+/* Documents Section */
+.docs-section {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.docs-title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+/* Grid */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.doc-box {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 35px 20px;
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease; */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    transition: .3s;
+    border-left: 3px solid #002b5c;
+    border-right: 3px solid #002b5c;
+    border-top: 3px solid #ff9933;
+    border-bottom: 3px solid #ff9933;
+}
+
+.doc-box:hover {
+    transform: translateY(-6px);
+}
+
+/* PDF Icon */
+.pdf-icon {
+    width: 70px;
+    margin-bottom: 18px;
+}
+
+/* Document Name */
+.doc-name {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Button */
+.doc-btn {
+    display: inline-block;
+    width: 85%;
+    padding: 14px 0;
+    border: 2px solid #123696;;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #123696;;
+    transition: all 0.3s ease;
+}
+
+.doc-btn:hover {
+    background: #123696;;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .docs-title {
+        font-size: 28px;
+    }
+    .doc-name {
+        font-size: 20px;
+    }
+}
+
+
