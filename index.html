@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
 <title>ग्रामपंचायत हेदली</title>
 <link rel="icon" type="image/png" href="photo/logo.png">
 </head>
@@ -41,29 +42,27 @@
 </div>
 </nav>
 <main>
-
 <div class="photo-scroller">
-    <h2>गावातील छायाचित्रे</h2>
-
+  <h2>गावातील छायाचित्रे</h2>
+  <div class="scroll-wrapper">
     <div class="scroll-container">
-        <img src="photo/gpimage.jpg" alt="">
-        <img src="photo/independenceday.jpeg" alt="">
-        <img src="photo/help.jpeg" alt="">
-        <img src="photo/school.jpeg" alt="">
-		<img src="photo/schoolfunction.jpeg" alt="">
-		<img src="photo/schoolfunction2.jpeg" alt="">
-		<img src="photo/camp.jpeg" alt="">
-		<img src="photo/help2.jpeg" alt="">
-		<img src="photo/childrens.jpeg" alt="">
-        	<img src="photo/photo1.jpg" alt="">
-		<img src="photo/photo2.jpg" alt="">
-		<img src="photo/photo3.jpg" alt="">
-		
+      <img src="photo/gpimage.jpg" alt="गावातील फोटो 1">
+      <img src="photo/independenceday.jpeg" alt="गावातील फोटो 2">
+      <img src="photo/help.jpeg" alt="गावातील फोटो 3">
+      <img src="photo/school.jpeg" alt="गावातील फोटो 4">
+      <img src="photo/schoolfunction.jpeg" alt="गावातील फोटो 5">
+      <img src="photo/schoolfunction2.jpeg" alt="गावातील फोटो 6">
+      <img src="photo/camp.jpeg" alt="गावातील फोटो 7">
+      <img src="photo/help2.jpeg" alt="गावातील फोटो 8">
+      <img src="photo/childrens.jpeg" alt="गावातील फोटो 9">
+      <img src="photo/photo1.jpg" alt="गावातील फोटो 10">
+      <img src="photo/photo2.jpg" alt="गावातील फोटो 11">
+      <img src="photo/photo3.jpg" alt="गावातील फोटो 12">
     </div>
-
-
+  </div>
 </div>
-<div class="info-box">
+
+<div class="intro-section">
 <h2>परिचय</h2>
       हेदली हे नैसर्गिक सौंदर्याने नटलेले, सांस्कृतिक परंपरा जपणारे आणि कृषिप्रधान असे एक प्रगतिशील गाव आहे. गावातील लोक मेहनती, सहकारभावी आणि सामाजिक बांधिलकी जपणारे आहेत. ग्रामपंचायत हेदली गावाच्या सर्वांगीण विकासासाठी सातत्याने कार्यरत आहे.ग्रामपंचायत, अंगणवाडी, शाळा आणि विविध विकास प्रकल्पांमुळे गावाची ओळख एक सुशिक्षित आणि संघटित समाजरचना म्हणून झाली आहे.या वेबसाइटच्या माध्यमातून गावातील नागरिकांना महत्वाच्या सूचना, फोटो गॅलरी, तसेच विविध योजना व त्यांची परिपूर्ण माहिती या संकेतस्थळावर उपलब्ध करण्यात आली आहे.
 </div>
@@ -71,36 +70,36 @@
 <div class="info-section">
     <h2>गावाची सविस्तर माहिती</h2>
 
-    <div class="cards">
-        <div class="card">
+    <div class="cards-1">
+        <div class="card-1">
             <span class="title">वाड्या</span>
             <span class="value">०८</span>
         </div>
-        <div class="card">
+        <div class="card-1">
             <span class="title">लोकसंख्या</span>
             <span class="value">१३६८</span>
         </div>
-        <div class="card">
+        <div class="card-1">
             <span class="title">क्षेत्रफळ</span>
             <span class="value">५९६.५३ हे</span>
         </div>
-         <div class="card">
+         <div class="card-1">
             <span class="title">प्राथमिक शाळा</span>
             <span class="value">०२</span>
         </div>
-         <div class="card">
+         <div class="card-1">
             <span class="title">अंगणवाडी</span>
             <span class="value">०२</span>
         </div>
-         <div class="card">
+         <div class="card-1">
             <span class="title">एकूण वॉर्ड्स</span>
             <span class="value">०३</span>
         </div>
-         <div class="card">
+         <div class="card-1">
             <span class="title">एकूण धार्मिक स्थळ</span>
             <span class="value">०४</span>
         </div>
-            <div class="card">
+            <div class="card-1">
             <span class="title">गावातील नळ पाणी योजना</span>
             <span class="value">०४</span>
         </div>
@@ -320,32 +319,52 @@ btn.addEventListener("click", () => { nav.classList.toggle("show"); });
 	
 </script>
 <script>
-    const sc = document.querySelector('.scroll-container');
-    setInterval(() => {
-        sc.scrollLeft += 350;
-        if (sc.scrollLeft >= sc.scrollWidth - sc.clientWidth) {
-            sc.scrollLeft = 0; // loop back
-        }
-    }, 2500);
+//     const sc = document.querySelector('.scroll-container');
+//     setInterval(() => {
+//         sc.scrollLeft += 350;
+//         if (sc.scrollLeft >= sc.scrollWidth - sc.clientWidth) {
+//             sc.scrollLeft = 0; // loop back
+//         }
+//     }, 2500);
 	
 	
-	const scroller = document.getElementById('scroller');
+// 	const scroller = document.getElementById('scroller');
+
+// let scrollAmount = 0;
+// const scrollStep = 2; // pixels per interval
+// const interval = 15;  // ms
+
+// function autoScroll() {
+//     scrollAmount += scrollStep;
+//     if (scrollAmount >= scroller.scrollWidth - scroller.clientWidth) {
+//         scrollAmount = 0; // restart from beginning
+//     }
+//     scroller.scrollLeft = scrollAmount;
+//     requestAnimationFrame(autoScroll);
+// }
+
+// // Start scrolling
+// autoScroll();
+
+
+const container = document.querySelector('.scroll-container');
+
+// Duplicate images for infinite scroll effect
+container.innerHTML += container.innerHTML;
 
 let scrollAmount = 0;
-const scrollStep = 2; // pixels per interval
-const interval = 15;  // ms
-
 function autoScroll() {
-    scrollAmount += scrollStep;
-    if (scrollAmount >= scroller.scrollWidth - scroller.clientWidth) {
-        scrollAmount = 0; // restart from beginning
+    scrollAmount += 1; // speed: increase for faster
+    if (scrollAmount >= container.scrollWidth / 2) {
+        scrollAmount = 0; // reset for infinite loop
     }
-    scroller.scrollLeft = scrollAmount;
+    container.style.transform = `translateX(-${scrollAmount}px)`;
     requestAnimationFrame(autoScroll);
 }
 
-// Start scrolling
+// Start auto scroll
 autoScroll();
+
 </script>
 
 </body>
