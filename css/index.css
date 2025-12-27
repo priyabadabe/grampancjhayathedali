@@ -15,7 +15,7 @@
 
 .services-title::after {
     content: '';
-    width: 80px;
+    width: 580px;
     height: 4px;
     background: #ff9933;
     display: block;
@@ -158,9 +158,9 @@
 
 .info-section h2::after {
     content: '';
-    width: 100px;
+    width: 360px;
     height: 5px;
-    background: #ffcc33;
+    /* background: #ffcc33; */
     display: block;
     margin: 10px auto 0;
     border-radius: 3px;
@@ -300,7 +300,7 @@
     content: '';
     width: 80px;
     height: 4px;
-    background: #ffcc33;
+    /* background: #ffcc33; */
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
@@ -372,7 +372,7 @@
 
 .photo-scroller h2::after {
     content: '';
-    width: 100px;
+       width: 240px;
     height: 4px;
     background: #ff9933;
     display: block;
