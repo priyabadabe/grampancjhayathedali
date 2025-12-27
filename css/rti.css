@@ -116,9 +116,18 @@
 /* ---------- MOBILE RESPONSIVE RTI TABLE ---------- */
 
 @media (max-width: 768px) {
+
     .info-box-1 {
-        overflow-x: auto;
-    }
+           overflow-x: auto;
+
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom:none;
+    margin: 25px auto;
+    width: 90%;
+     font-size: 23px;
+}
 
     .rti-table {
         min-width: 700px;
