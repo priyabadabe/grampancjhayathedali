@@ -113,3 +113,14 @@
         font-size:15px;
     }
 }
+/* ---------- MOBILE RESPONSIVE RTI TABLE ---------- */
+
+@media (max-width: 768px) {
+    .info-box-1 {
+        overflow-x: auto;
+    }
+
+    .rti-table {
+        min-width: 700px;
+    }
+}
