@@ -45,19 +45,33 @@
 <div class="photo-scroller">
   <h2>गावातील छायाचित्रे</h2>
   <div class="scroll-wrapper">
-    <div class="scroll-container">
-      <img src="photo/gpimage.jpg" alt="गावातील फोटो 1">
-      <img src="photo/independenceday.jpeg" alt="गावातील फोटो 2">
-      <img src="photo/help.jpeg" alt="गावातील फोटो 3">
-      <img src="photo/school.jpeg" alt="गावातील फोटो 4">
-      <img src="photo/schoolfunction.jpeg" alt="गावातील फोटो 5">
-      <img src="photo/schoolfunction2.jpeg" alt="गावातील फोटो 6">
-      <img src="photo/camp.jpeg" alt="गावातील फोटो 7">
-      <img src="photo/help2.jpeg" alt="गावातील फोटो 8">
-      <img src="photo/childrens.jpeg" alt="गावातील फोटो 9">
-      <img src="photo/photo1.jpg" alt="गावातील फोटो 10">
-      <img src="photo/photo2.jpg" alt="गावातील फोटो 11">
-      <img src="photo/photo3.jpg" alt="गावातील फोटो 12">
+   <div class="scroll-track">
+      <img class="photo-item" src="photo/gpimage.jpg" alt="गावातील फोटो 1">
+      <img class="photo-item" src="photo/independenceday.jpeg" alt="गावातील फोटो 2">
+      <img class="photo-item" src="photo/help.jpeg" alt="गावातील फोटो 3">
+      <img class="photo-item" src="photo/school.jpeg" alt="गावातील फोटो 4">
+      <img class="photo-item" src="photo/schoolfunction.jpeg" alt="गावातील फोटो 5">
+      <img class="photo-item" src="photo/schoolfunction2.jpeg" alt="गावातील फोटो 6">
+      <img class="photo-item" src="photo/camp.jpeg" alt="गावातील फोटो 7">
+      <img class="photo-item" src="photo/help2.jpeg" alt="गावातील फोटो 8">
+      <img class="photo-item" src="photo/childrens.jpeg" alt="गावातील फोटो 9">
+      <img class="photo-item" src="photo/photo1.jpg" alt="गावातील फोटो 10">
+      <img class="photo-item" src="photo/photo2.jpg" alt="गावातील फोटो 11">
+      <img class="photo-item" src="photo/photo3.jpg" alt="गावातील फोटो 12">
+
+<!-- duplicate set (required for infinite scroll) -->
+         <img class="photo-item" src="photo/gpimage.jpg" alt="गावातील फोटो 1">
+      <img class="photo-item" src="photo/independenceday.jpeg" alt="गावातील फोटो 2">
+      <img class="photo-item" src="photo/help.jpeg" alt="गावातील फोटो 3">
+      <img class="photo-item" src="photo/school.jpeg" alt="गावातील फोटो 4">
+      <img class="photo-item" src="photo/schoolfunction.jpeg" alt="गावातील फोटो 5">
+      <img class="photo-item" src="photo/schoolfunction2.jpeg" alt="गावातील फोटो 6">
+      <img class="photo-item" src="photo/camp.jpeg" alt="गावातील फोटो 7">
+      <img class="photo-item" src="photo/help2.jpeg" alt="गावातील फोटो 8">
+      <img class="photo-item" src="photo/childrens.jpeg" alt="गावातील फोटो 9">
+      <img class="photo-item" src="photo/photo1.jpg" alt="गावातील फोटो 10">
+      <img class="photo-item" src="photo/photo2.jpg" alt="गावातील फोटो 11">
+      <img class="photo-item" src="photo/photo3.jpg" alt="गावातील फोटो 12">
     </div>
   </div>
 </div>
@@ -235,7 +249,8 @@
         </div>
 
     </div>
-</section></div>
+</section>
+</div>
 
 
 
@@ -319,32 +334,7 @@ btn.addEventListener("click", () => { nav.classList.toggle("show"); });
 	
 </script>
 <script>
-//     const sc = document.querySelector('.scroll-container');
-//     setInterval(() => {
-//         sc.scrollLeft += 350;
-//         if (sc.scrollLeft >= sc.scrollWidth - sc.clientWidth) {
-//             sc.scrollLeft = 0; // loop back
-//         }
-//     }, 2500);
-	
-	
-// 	const scroller = document.getElementById('scroller');
 
-// let scrollAmount = 0;
-// const scrollStep = 2; // pixels per interval
-// const interval = 15;  // ms
-
-// function autoScroll() {
-//     scrollAmount += scrollStep;
-//     if (scrollAmount >= scroller.scrollWidth - scroller.clientWidth) {
-//         scrollAmount = 0; // restart from beginning
-//     }
-//     scroller.scrollLeft = scrollAmount;
-//     requestAnimationFrame(autoScroll);
-// }
-
-// // Start scrolling
-// autoScroll();
 
 
 const container = document.querySelector('.scroll-container');

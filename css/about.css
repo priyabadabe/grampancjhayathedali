@@ -1,0 +1,48 @@
+    /* Introduction Section */
+.intro-section {
+background: linear-gradient(135deg, #1e3c72, #f3904f);
+
+    color: #fff;
+    padding: 10px 40px 40px;
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    animation: fadeInUpIntro 1s forwards;
+}
+
+/* Section Heading */
+.intro-section h2 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+}
+
+.intro-section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #ffcc33;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Paragraph styling */
+.intro-section p {
+    font-size: 20px;
+    color: #f0f8ff;
+    line-height: 1.9;
+}
+
+
+

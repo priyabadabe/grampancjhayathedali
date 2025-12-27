@@ -270,9 +270,9 @@
 
 /* Introduction Section */
 .intro-section {
-    background: linear-gradient(135deg, #05457b, #0b3d91);
+  background: linear-gradient(135deg, #134e5e, #71b280);
     color: #fff;
-    padding: 10px 40px;
+    padding: 10px 40px 40px;
     width: 90%;
     margin: 50px auto;
     border-radius: 20px;
@@ -355,7 +355,7 @@
     width: 92%;
     margin: 50px auto;
     padding: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: linear-gradient(135deg, #f0f4f9, #d9e2f3);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -386,14 +386,105 @@
     position: relative;
 }
 
-/* Scroll Container */
 .scroll-container {
     display: flex;
-    gap: 20px;
-    animation: scrollLeft 30s linear infinite;
+    gap: 25px;
+    padding: 25px;
 }
 
-.scroll-container img {
+
+
+.scroll-wrapper {
+    overflow: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+}
+
+.photo-scroller {
+    width: 92%;
+    margin: 50px auto;
+    padding: 25px;
+    background: linear-gradient(135deg,#f0f4f9,#d9e2f3);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* wrapper */
+.scroll-wrapper {
+    overflow: hidden;
+}
+
+/* TRACK (moves) */
+.scroll-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: scroll 90s linear infinite;
+}
+
+/* ⏸️ PAUSE ON HOVER */
+.scroll-wrapper:hover .scroll-track {
+    animation-play-state: paused;
+}
+
+/* CARD */
+.photo-item {
+    width: 520px;
+    height: 360px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* IMAGE ZOOM */
+.photo-item:hover img {
+    transform: scale(1.12);
+}
+
+/* OVERLAY */
+.photo-item::after {
+    content: "गावातील क्षण";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.photo-item:hover::after {
+    opacity: 1;
+}
+
+/* AUTO SCROLL */
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+/* .scroll-container img {
     height: 350px;
     width: 650px;
     object-fit: cover;
@@ -406,7 +497,7 @@
 .scroll-container img:hover {
     transform: scale(1.08);
     box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
+} */
 
 /* Scroll Animation */
 @keyframes scrollLeft {
