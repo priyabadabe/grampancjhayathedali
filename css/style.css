@@ -145,14 +145,6 @@ header h3 { margin: 0; font-weight: normal; font-size: 18px; }
 }
 
 
-/* Hero */
-.hero {
-    height: 600px; 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../photo/gpimage.jpg') center/cover no-repeat; 
-    display: flex; justify-content: center; align-items: end; 
-    color: #23ffc0; text-align: end;
-}
-.hero h2 { font-size: 45px; margin: 0; }
 
 /* Cards */
 .cards { display: flex; flex-wrap: wrap; gap: 20px; }
