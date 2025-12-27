@@ -9,7 +9,6 @@
     background:#ffffff;
     padding:30px;
     border-radius:14px;
-    border-left:6px solid #003f7f;
     box-shadow:0 8px 20px rgba(0,0,0,0.12);
     animation: fadeUp 0.8s ease;
 }

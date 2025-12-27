@@ -66,5 +66,5 @@
 
 
 /* Section */
-.section { width: 90%; margin: 35px auto; background: white; padding: 20px; border-radius: 8px; border-left: 6px solid #003f7f; box-shadow: 0 2px 8px #ccc; }
+.section { width: 90%; margin: 35px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
 .section h2 { margin-top: 0; color: #003f7f; border-bottom: 2px solid #ff9933; padding-bottom: 6px; }

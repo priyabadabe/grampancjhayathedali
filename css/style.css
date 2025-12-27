@@ -192,6 +192,8 @@ border-top: 5px solid #ff9933;
     border-radius: 12px;
     border-left: 4px solid #002b5c; /* blue stripe */
     border-top: 3px solid #ff9933; /* orange bar */
+    border-right: 4px solid #002b5c; /* blue stripe */
+    border-bottom: 3px solid #ff9933; /* orange bar */
     box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
     margin: 25px auto;
     width: 90%;
