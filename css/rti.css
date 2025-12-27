@@ -123,4 +123,7 @@
     .rti-table {
         min-width: 700px;
     }
+    .rti-title{
+        width: 600px;
+    }
 }
