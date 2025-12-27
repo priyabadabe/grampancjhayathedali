@@ -1,6 +1,19 @@
 /* ===============================
    SELF DECLARATION – MATCHED DESIGN
+   WITH ANIMATION
    =============================== */
+
+/* Container Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .sd-container{
     width:90%;
@@ -8,17 +21,15 @@
     margin:35px auto;
     background:#ffffff;
     border-radius:12px;
-    border-left:4px solid #ff9933;   /* blue stripe */
-    border-top:4px solid #ff9933;    /* saffron bar */
-        border-right:4px solid #ff9933; 
-         border-bottom:4px solid #ff9933; 
+    border:4px solid #ff9933;
     box-shadow:0 3px 10px rgba(0,0,0,0.08);
     overflow:hidden;
+    animation: fadeUp 0.8s ease forwards;
 }
 
 /* Header */
 .sd-header{
-    background:#ff9933;  /* navbar blue */
+    background:#ff9933;
     padding:20px;
     text-align:center;
 }
@@ -46,6 +57,18 @@
     padding:0;
 }
 
+/* List item animation */
+@keyframes slideIn {
+    from {
+        opacity:0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
 .sd-list li{
     padding:16px 30px;
     border-bottom:1px solid #e6e6e6;
@@ -56,23 +79,40 @@
     display:flex;
     align-items:center;
     gap:12px;
-    transition:all 0.25s ease;
+    transition:all 0.3s ease;
+    animation: slideIn 0.6s ease forwards;
 }
 
-/* ✔ icon */
+/* Stagger delay */
+.sd-list li:nth-child(1){ animation-delay: .1s; }
+.sd-list li:nth-child(2){ animation-delay: .2s; }
+.sd-list li:nth-child(3){ animation-delay: .3s; }
+.sd-list li:nth-child(4){ animation-delay: .4s; }
+.sd-list li:nth-child(5){ animation-delay: .5s; }
+.sd-list li:nth-child(6){ animation-delay: .6s; }
+.sd-list li:nth-child(7){ animation-delay: .7s; }
+.sd-list li:nth-child(8){ animation-delay: .8s; }
+
+/* ✔ Icon */
 .sd-list li::before{
     content:"✔";
     color:#ff9933;
     font-weight:bold;
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect (soft govt style) */
+/* Hover effect */
 .sd-list li:hover{
-    background:#f7faff;
-    padding-left:38px;
+    background:#fff6ec;
+    padding-left:40px;
 }
 
-/* Remove border from last */
+/* Icon bounce on hover */
+.sd-list li:hover::before{
+    transform: scale(1.3) rotate(10deg);
+}
+
+/* Remove border last */
 .sd-list li:last-child{
     border-bottom:none;
 }
@@ -81,6 +121,11 @@
 @media(max-width:768px){
     .sd-header h1{
         font-size:26px;
+    }
+
+    .sd-desc{
+        font-size:16px;
+        padding:15px;
     }
 
     .sd-list li{
