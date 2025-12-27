@@ -15,9 +15,8 @@
 
 .services-title::after {
     content: '';
-    width: 580px;
     height: 4px;
-    background: #ff9933;
+    /* background: #ff9933; */
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
