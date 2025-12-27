@@ -124,9 +124,8 @@
     border-top: none;
     border-right: none;
     border-bottom:none;
-    margin: 25px auto;
-    width: 90%;
-     font-size: 23px;
+  padding: 5px 5px;
+
 }
 
     .rti-table {
