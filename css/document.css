@@ -1,7 +1,7 @@
 /* Documents Section */
 .docs-section {
     width: 90%;
-    margin: 40px auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -15,25 +15,31 @@
 /* Grid */
 .docs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     gap: 30px;
 }
 
 /* Card */
 .doc-box {
     background: #ffffff;
-    border-radius: 14px;
-    padding: 35px 20px;
-    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease; */
+    border-radius: 12px;
+
+    /* ⬇️ HEIGHT CONTROL */
+    padding: 20px 18px;   /* was 35px 20px */
+    min-height: 180px;    /* ensures compact card */
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
     transition: .3s;
+
     border-left: 3px solid #002b5c;
     border-right: 3px solid #002b5c;
     border-top: 3px solid #ff9933;
     border-bottom: 3px solid #ff9933;
+
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* gap: 16px; */
 }
 
 .doc-box:hover {
@@ -57,7 +63,7 @@
 /* Button */
 .doc-btn {
     display: inline-block;
-    width: 85%;
+    width: 75%;
     padding: 14px 0;
     border: 2px solid #123696;;
     border-radius: 8px;

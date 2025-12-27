@@ -1,0 +1,90 @@
+/* ===============================
+   SELF DECLARATION – MATCHED DESIGN
+   =============================== */
+
+.sd-container{
+    width:90%;
+    max-width:1200px;
+    margin:35px auto;
+    background:#ffffff;
+    border-radius:12px;
+    border-left:4px solid #ff9933;   /* blue stripe */
+    border-top:4px solid #ff9933;    /* saffron bar */
+        border-right:4px solid #ff9933; 
+         border-bottom:4px solid #ff9933; 
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/* Header */
+.sd-header{
+    background:#ff9933;  /* navbar blue */
+    padding:20px;
+    text-align:center;
+}
+
+.sd-header h1{
+    margin:0;
+    color:#770f0f;
+    font-size:32px;
+    font-weight:700;
+}
+
+/* Description */
+.sd-desc{
+    text-align:center;
+    padding:18px 30px;
+    font-size:18px;
+    color:#444;
+    border-bottom:1px solid #e0e6ef;
+}
+
+/* List */
+.sd-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.sd-list li{
+    padding:16px 30px;
+    border-bottom:1px solid #e6e6e6;
+    font-size:21px;
+    font-weight:600;
+    color:#002b5c;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    transition:all 0.25s ease;
+}
+
+/* ✔ icon */
+.sd-list li::before{
+    content:"✔";
+    color:#ff9933;
+    font-weight:bold;
+}
+
+/* Hover effect (soft govt style) */
+.sd-list li:hover{
+    background:#f7faff;
+    padding-left:38px;
+}
+
+/* Remove border from last */
+.sd-list li:last-child{
+    border-bottom:none;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .sd-header h1{
+        font-size:26px;
+    }
+
+    .sd-list li{
+        font-size:18px;
+        padding:14px 20px;
+    }
+}
